@@ -1,0 +1,32 @@
+Angular is used to make single page web application. 
+Ex - Youtube
+
+Entry point of angular -> project\src\index.html
+
+Project structure-
+Src\app
+app-routing.module.ts - Need to write all the routing code here
+app.component.css     - Styling will be written here (Styling) 
+app.component.html    - Html Code can be written here (Structure)
+app.component.spec.ts - Used for testing
+app.component.ts      - Logic can be written here (Working)
+app.module.ts         - Entry Point (If we want to use other modules we can import here)
+
+
+Adding bootstrap to angular-
+npm install bootstrap/jquery
+In angualr.json under architect->build->Styles-> "./node_modules/bootstrap/dist/css/bootstrap.min.css" (add the location of bootstrap) and similar for scripts->"./node_modules/bootstrap/dist/js/bootstrap.min.js"  
+
+
+
+
+
+ng new appname - To create new application
+
+ng serve -  To run the app
+(Compiles & converts code into browser compatible)
+
+ng generate component component_name - To create new component
+ng g c component_name (short)
+
+ng build --prod - Created a deployable
