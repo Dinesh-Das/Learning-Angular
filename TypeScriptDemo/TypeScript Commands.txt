@@ -1,0 +1,3 @@
+tsc --init       -> Creates tsconfig.json
+tsc              -> To compile typescript code to javascript
+node programname -> To run the compiled typescript code
