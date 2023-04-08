@@ -1,20 +1,34 @@
 // We can write business logics (Writing services/Components)
 // Creating class in TS
 
-class Employee {
+import {Login,User} from "./Interface";
+// import * as UserLogin from "./Interface";
+
+interface Address {
+    street:string;
+    city:string;
+    state:string;
+    pin:string;
+}
+
+class Employee implements Login{
     // Defining properties
 
     #id!: number;   //We can use private keyword or # symbol to make properties private
 
     protected name!: string;
 
-    address!: string;
+    address!: Address;
 
     // In typescript you can either have default constructor or parameterised constructor
-    constructor(id:number,name:string,address:string){
+    constructor(id:number,name:string,address:Address){
         this.#id=id;
         this.name=name;
         this.address=address;
+    }
+    login(): User {
+        return {name:"John",id:1,email:""};
+        // throw new Error("Method not implemented.");/
     }
 
     // Creating method
@@ -39,7 +53,7 @@ class Employee {
 }
 
 // Instance of class
-let jhon = new Employee(1,"Jhon","Highway 76");
+let jhon = new Employee(1,"Jhon",{street:"ABC",state:"Maharashtra",city:"Mumbai",pin:"40005"});
 
 // jhon.id = 1;
 // jhon.name = "John Shwitz";
@@ -54,7 +68,7 @@ console.log(address)
 
 // Inheriting
 class Manager extends Employee{
-    constructor(id:number, name:string,address:string){
+    constructor(id:number, name:string,address:Address){
         super(id,name,address);
     }
 
@@ -63,5 +77,5 @@ class Manager extends Employee{
     }
 }
 
-let mike = new Manager(2,"Mike","Alphabet road");
+let mike = new Manager(2,"Mike",{street:"ABC",state:"Maharashtra",city:"Aurangabad",pin:"40005"});
 console.log(mike.getNameWithAddress());

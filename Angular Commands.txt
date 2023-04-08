@@ -20,6 +20,12 @@ In angualr.json under architect->build->Styles-> "./node_modules/bootstrap/dist/
 
 
 
+npm i @angular/cli -g - To install angular globally
+
+(ng --version | ng -v ) (ng version | ng v)  -To check angular cli version
+
+ng new appname --createApplication=false   -> This will create an empty project 
+ng g app appname -> To add app later on after creating empty project
 
 ng new appname - To create new application
 

@@ -13,6 +13,7 @@ var __classPrivateFieldGet = (this && this.__classPrivateFieldGet) || function (
     return kind === "m" ? f : kind === "a" ? f.call(receiver) : f ? f.value : state.get(receiver);
 };
 var _Employee_id;
+Object.defineProperty(exports, "__esModule", { value: true });
 class Employee {
     // In typescript you can either have default constructor or parameterised constructor
     constructor(id, name, address) {
@@ -21,6 +22,10 @@ class Employee {
         __classPrivateFieldSet(this, _Employee_id, id, "f");
         this.name = name;
         this.address = address;
+    }
+    login() {
+        return { name: "John", id: 1, email: "" };
+        // throw new Error("Method not implemented.");/
     }
     // Creating method
     getNameWithAddress() {
@@ -41,7 +46,7 @@ class Employee {
 }
 _Employee_id = new WeakMap();
 // Instance of class
-let jhon = new Employee(1, "Jhon", "Highway 76");
+let jhon = new Employee(1, "Jhon", { street: "ABC", state: "Maharashtra", city: "Mumbai", pin: "40005" });
 // jhon.id = 1;
 // jhon.name = "John Shwitz";
 // jhon.address = "Highway 76";
@@ -59,5 +64,5 @@ class Manager extends Employee {
         return `${this.name} is a manager at ${this.address}`;
     }
 }
-let mike = new Manager(2, "Mike", "Alphabet road");
+let mike = new Manager(2, "Mike", { street: "ABC", state: "Maharashtra", city: "Aurangabad", pin: "40005" });
 console.log(mike.getNameWithAddress());
