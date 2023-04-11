@@ -1,8 +1,13 @@
 <h1>Hello World</h1>
-<app-rooms></app-rooms>
+<!-- <app-rooms></app-rooms> -->
 
+<app-container>
+  <app-rooms></app-rooms>
+  <h1>This is from ng-content</h1>
+  <app-employees></app-employees>
+</app-container>
 
-
+<div #name></div>
 
 <!-- NgSwitch Example -->
 <!-- 
@@ -14,4 +19,8 @@
   <div *ngSwitchDefault>
     You are not authorized to view this page
   </div>
+</div> -->
+
+<!-- <div>
+  <ng-template #user> </ng-template>
 </div> -->
